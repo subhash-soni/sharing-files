@@ -45,4 +45,6 @@ workflows:
   write-to-output-file-workflow:
     jobs:
       - write-to-output-file
-      - print-output-file
+      - print-output-file :
+                 requires : 
+                   - write-to-output-file
